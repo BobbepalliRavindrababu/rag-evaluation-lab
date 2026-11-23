@@ -1,0 +1,2 @@
+[console_scripts]
+rag-evaluate = rag_evaluation_lab.cli:main
