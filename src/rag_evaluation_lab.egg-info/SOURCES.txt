@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/rag_evaluation_lab/__init__.py
+src/rag_evaluation_lab/cli.py
+src/rag_evaluation_lab/metrics.py
+src/rag_evaluation_lab.egg-info/PKG-INFO
+src/rag_evaluation_lab.egg-info/SOURCES.txt
+src/rag_evaluation_lab.egg-info/dependency_links.txt
+src/rag_evaluation_lab.egg-info/entry_points.txt
+src/rag_evaluation_lab.egg-info/top_level.txt
+tests/test_evaluation.py

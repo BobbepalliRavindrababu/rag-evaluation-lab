@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-evaluation-lab"
+version = "0.1.0"
+description = "A dependency-free toolkit for evaluating RAG retrieval and answers"
+requires-python = ">=3.9"
+
+[project.scripts]
+rag-evaluate = "rag_evaluation_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
