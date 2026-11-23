@@ -1,0 +1,143 @@
+
+{
+  "dataset_name": "Nexora Employee Policy Golden Dataset",
+  "version": "1.0",
+  "description": "Human-verified questions and expected answers for evaluating the RAG system.",
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "What are the standard working hours at Nexora Technologies?",
+      "question_type": "simple_factual",
+      "expected_answer": "The standard working hours are 9:00 AM to 6:00 PM, Monday to Friday, with a one-hour lunch break.",
+      "is_answerable": true,
+      "source_documents": ["employee_handbook.md"],
+      "evidence": ["The standard working week consists of five working days, Monday to Friday.", "Standard working hours are from 9:00 AM to 6:00 PM.", "Employees are entitled to a one-hour lunch break."]
+    },
+    {
+      "id": "Q002",
+      "question": "How long is the probation period for newly hired employees?",
+      "question_type": "simple_factual",
+      "expected_answer": "The probation period is six months. The company may extend it if additional assessment time is required.",
+      "is_answerable": true,
+      "source_documents": ["employee_handbook.md"],
+      "evidence": ["Newly hired employees must complete a probation period of six months.", "The company may extend the probation period if additional assessment time is required."]
+    },
+    {
+      "id": "Q003",
+      "question": "How many paid annual leave days does an eligible employee receive each year?",
+      "question_type": "numerical",
+      "expected_answer": "Eligible employees receive 20 days of paid annual leave per calendar year.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Eligible employees receive 20 days of paid annual leave per calendar year."]
+    },
+    {
+      "id": "Q004",
+      "question": "What is the maximum number of annual leave days an employee can carry forward?",
+      "question_type": "numerical",
+      "expected_answer": "Employees can carry forward a maximum of 5 unused annual leave days into the next calendar year.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Employees may carry forward a maximum of 5 unused annual leave days into the next calendar year."]
+    },
+    {
+      "id": "Q005",
+      "question": "When does carried-forward annual leave expire?",
+      "question_type": "date_and_condition",
+      "expected_answer": "Carried-forward annual leave must be used by March 31 of the following year. Any unused carried-forward leave expires after March 31.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Carried-forward leave must be used by March 31 of the following year.", "Unused carried-forward leave expires after March 31."]
+    },
+    {
+      "id": "Q006",
+      "question": "Can employees on probation use annual leave?",
+      "question_type": "multi_condition",
+      "expected_answer": "Annual leave accrues during the six-month probation period, but employees can generally use it after successfully completing probation. Exceptions may be approved by the reporting manager and Human Resources in exceptional circumstances.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Annual leave entitlement accrues during the six-month probation period.", "Employees may use accrued annual leave after successfully completing probation.", "Exceptions during probation may be approved by the reporting manager and Human Resources in exceptional circumstances."]
+    },
+    {
+      "id": "Q007",
+      "question": "How many paid sick leave days are provided annually, and can unused sick leave be carried forward?",
+      "question_type": "multi_condition",
+      "expected_answer": "Eligible employees receive 10 days of paid sick leave per calendar year. Unused sick leave cannot be carried forward to the next calendar year.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Eligible employees receive 10 days of paid sick leave per calendar year.", "Unused sick leave cannot be carried forward to the next calendar year."]
+    },
+    {
+      "id": "Q008",
+      "question": "How many paid public holidays does the company provide each year?",
+      "question_type": "numerical",
+      "expected_answer": "The company provides 10 paid public holidays per calendar year. These are separate from annual leave and sick leave.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["The company provides 10 paid public holidays per calendar year.", "Public holidays are separate from annual leave and sick leave."]
+    },
+    {
+      "id": "Q009",
+      "question": "How far in advance should employees submit planned annual leave requests?",
+      "question_type": "simple_factual",
+      "expected_answer": "Employees should submit planned annual leave requests at least 3 working days in advance. Approval from the reporting manager is required.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Employees should submit planned annual leave requests at least 3 working days in advance.", "Annual leave requires approval from the employee's reporting manager."]
+    },
+    {
+      "id": "Q010",
+      "question": "What is the maximum meal reimbursement amount per employee per day during approved domestic business travel?",
+      "question_type": "numerical",
+      "expected_answer": "The maximum meal reimbursement limit is ₹800 per employee per day.",
+      "is_answerable": true,
+      "source_documents": ["expense_reimbursement_policy.md"],
+      "evidence": ["The maximum meal reimbursement limit is ₹800 per employee per day."]
+    },
+    {
+      "id": "Q011",
+      "question": "What is the standard accommodation limit for domestic business travel?",
+      "question_type": "numerical",
+      "expected_answer": "The standard accommodation limit is ₹4,000 per night for domestic business travel. Exceeding this limit requires prior approval from the department head.",
+      "is_answerable": true,
+      "source_documents": ["expense_reimbursement_policy.md"],
+      "evidence": ["The standard accommodation limit is ₹4,000 per night for domestic business travel.", "Accommodation exceeding this limit requires prior approval from the department head."]
+    },
+    {
+      "id": "Q012",
+      "question": "How many days do employees have to submit expense reimbursement claims after completing business travel?",
+      "question_type": "numerical",
+      "expected_answer": "Employees must submit reimbursement claims within 10 calendar days after completing the business activity or travel.",
+      "is_answerable": true,
+      "source_documents": ["expense_reimbursement_policy.md"],
+      "evidence": ["Employees must submit reimbursement claims within 10 calendar days after completing the business activity or travel."]
+    },
+    {
+      "id": "Q013",
+      "question": "What is the difference between annual leave and sick leave?",
+      "question_type": "comparison",
+      "expected_answer": "Eligible employees receive 20 days of paid annual leave and 10 days of paid sick leave per calendar year. Annual leave is for vacations, personal commitments, and planned time away from work. Sick leave is for illness or medical conditions. Unused annual leave can be carried forward up to 5 days, subject to the March 31 deadline, whereas unused sick leave cannot be carried forward.",
+      "is_answerable": true,
+      "source_documents": ["leave_and_attendance_policy.md"],
+      "evidence": ["Annual leave is intended for vacations, personal commitments, and planned time away from work.", "Eligible employees receive 20 days of paid annual leave per calendar year.", "Eligible employees receive 10 days of paid sick leave per calendar year.", "Employees may carry forward a maximum of 5 unused annual leave days into the next calendar year.", "Unused sick leave cannot be carried forward to the next calendar year."]
+    },
+    {
+      "id": "Q014",
+      "question": "What are the standard working hours, and how many annual leave days does an eligible employee receive?",
+      "question_type": "multi_document",
+      "expected_answer": "The standard working hours are 9:00 AM to 6:00 PM, Monday to Friday, with a one-hour lunch break. Eligible employees receive 20 days of paid annual leave per calendar year.",
+      "is_answerable": true,
+      "source_documents": ["employee_handbook.md", "leave_and_attendance_policy.md"],
+      "evidence": ["Standard working hours are from 9:00 AM to 6:00 PM.", "Eligible employees receive 20 days of paid annual leave per calendar year."]
+    },
+    {
+      "id": "Q015",
+      "question": "Does Nexora Technologies provide stock options to its employees? If yes, how many shares are granted?",
+      "question_type": "unanswerable",
+      "expected_answer": "The provided policy documents do not specify whether the company offers stock options or how many shares employees may receive. This information cannot be determined from the available documents.",
+      "is_answerable": false,
+      "source_documents": [],
+      "evidence": []
+    }
+  ]
+}
